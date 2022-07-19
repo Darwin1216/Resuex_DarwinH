@@ -33,7 +33,7 @@ public class Cliente extends Persona {
     @Override
     public String toString() {
         return super.toString()+"\n"
-                +"NumerodeContacto: "+getTelefonodecontacto(); //To change body of generated methods, choose Tools | Templates.
+                +"NumerodeContacto: "+getTelefonodecontacto() //To change body of generated methods, choose Tools | Templates.
     }
     
     

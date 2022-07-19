@@ -6,13 +6,16 @@
 package ec.edu.intsuperior.modelo;
 
 import java.util.Date;
+import java.util.HashSet;
 
 /**
  *
  * @author Usuario
- */
+ */ 
 public class Empleado extends Persona{
    String sueldobruto;
+   
+   HashSet<Directivo>directivo=new HashSet<Directivo>();
 
     public Empleado() {
     }
@@ -22,9 +25,19 @@ public class Empleado extends Persona{
         this.sueldobruto = sueldobruto;
     }
 
+    public void setDirectivo(HashSet<Directivo> directivo) {
+        this.directivo = directivo;
+    }
+    
+
     public void setSueldobruto(String sueldobruto) {
         this.sueldobruto = sueldobruto;
     }
+
+    public HashSet<Directivo> getDirectivo() {
+        return directivo;
+    }
+    
 
     public String getSueldobruto() {
         return sueldobruto;
@@ -33,6 +46,7 @@ public class Empleado extends Persona{
     @Override
     public String toString() {
         return super.toString()+"\n"
+                +"Directivo"+getDirectivo()+"\n"
                 +"SueldoBruto: "+getSueldobruto(); //To change body of generated methods, choose Tools | Templates.
     }
    

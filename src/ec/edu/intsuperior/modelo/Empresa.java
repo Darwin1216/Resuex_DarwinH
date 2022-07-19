@@ -5,11 +5,13 @@
  */
 package ec.edu.intsuperior.modelo;
 
+import java.util.HashSet;
+
 /**
  *
  * @author Usuario
  */
-public class Empresa {
+public class Empresa{
     private String nombre;
     private String direccion;
     private String telfono;
@@ -18,6 +20,10 @@ public class Empresa {
     private String correo;
     private String pais;
     private String region;
+    
+    HashSet<Cliente>cliente=new HashSet<Cliente>();
+    HashSet<Empleado>empleado=new HashSet<Empleado>();
+
     
     public Empresa(){
         
@@ -31,8 +37,26 @@ public class Empresa {
         this.contacto = contacto;
         this.correo = correo;
         this.pais = pais;
-        this.region = region;
+        this.region = region;    
     }
+
+    public void setCliente(HashSet<Cliente> cliente) {
+        this.cliente = cliente;
+    }
+  
+    public void MostrarClientes(){
+    System.out.println("\t\tLista de Clientes");
+    System.out.println(cliente.toString());
+}
+
+    public void setEmpleado(HashSet<Empleado> empleado) {
+        this.empleado = empleado;
+    }
+    public void MostrarEmpleados(){
+        System.out.println("\t\tLista de Empleados");
+    System.out.println(cliente.toString());
+    }
+    
 
     public void setContacto(String contacto) {
         this.contacto = contacto;
@@ -65,6 +89,7 @@ public class Empresa {
     public void setTelfono(String telfono) {
         this.telfono = telfono;
     }
+    
 
     public String getNombre() {
         return nombre;
@@ -101,6 +126,8 @@ public class Empresa {
     @Override
     public String toString() {
         return "los datos de la empresa son:\n"
+                +"Cliente"+getCliente()+"\n"
+                +"Empleado"+getEmpleado()+"\n"
                 +"Nombre: "+getNombre()+"\n"
                 +"Direccion: "+getDireccion()+"\n"
                 +"Telefono: "+getTelfono()+"\n"

@@ -5,22 +5,36 @@
  */
 package ec.edu.intsuperior.modelo;
 
+import java.util.HashSet;
+
 /**
  *
  * @author Usuario
  */
 public class Directivo {
+    
+HashSet<Empleado>empleado=new HashSet<Empleado>();
+
    
-    public enum Categoria{CategoriaA, CategoriaB, CategoriaC, CategoriaD}
+    public enum Categoria{CategoriaConserje, CategoriaMantenimiento, CategoriaDirectorEjecutivo, CategoriaDirectorComercial,CategoriaDirectordeOperciones,CategoriaDirectordeMarketing,CategoriaDirectordeRecursosHumanos}
     private Categoria categoria;
     
     public Directivo(){
         
     }
 
+    public void setEmpleado(HashSet<Empleado> empleado) {
+        this.empleado = empleado;
+    }
+
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
+
+    public HashSet<Empleado> getEmpleado() {
+        return empleado;
+    }
+    
 
     public Categoria getCategoria() {
         return categoria;
@@ -29,6 +43,7 @@ public class Directivo {
     @Override
     public String toString() {
         return "las categorias son :\n"
+                +"Empleado"+getEmpleado()+"\n"
                 +"Categoria"+getCategoria()+"\n";
          
                 }
