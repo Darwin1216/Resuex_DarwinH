@@ -43,7 +43,7 @@ public class Empresa{
     public void setCliente(HashSet<Cliente> cliente) {
         this.cliente = cliente;
     }
-  
+
     public void MostrarClientes(){
     System.out.println("\t\tLista de Clientes");
     System.out.println(cliente.toString());
@@ -88,6 +88,14 @@ public class Empresa{
 
     public void setTelfono(String telfono) {
         this.telfono = telfono;
+    }
+
+    public HashSet<Cliente> getCliente() {
+        return cliente;
+    }
+
+    public HashSet<Empleado> getEmpleado() {
+        return empleado;
     }
     
 

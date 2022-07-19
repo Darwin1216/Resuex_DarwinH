@@ -17,10 +17,12 @@ public class Cliente extends Persona {
     public Cliente() {
     }
 
-    public Cliente(String telefonodecontacto, String Cedula, String nombre1, String nombre2, String apellido1, String apellio2, String telefono, String correo, Date fechadenacimiento) {
-        super(Cedula, nombre1, nombre2, apellido1, apellio2, telefono, correo, fechadenacimiento);
+    public Cliente(String telefonodecontacto, String Cedula, String nombre1, String nombre2, String apellido1, String apellio2, String telefono, String correo, int edad) {
+        super(Cedula, nombre1, nombre2, apellido1, apellio2, telefono, correo, edad);
         this.telefonodecontacto = telefonodecontacto;
     }
+
+    
 
     public void setTelefonodecontacto(String telefonodecontacto) {
         this.telefonodecontacto = telefonodecontacto;
@@ -32,9 +34,11 @@ public class Cliente extends Persona {
 
     @Override
     public String toString() {
-        return super.toString()+"\n"
-                +"NumerodeContacto: "+getTelefonodecontacto() //To change body of generated methods, choose Tools | Templates.
+        return super.toString()+" \n"
+                +"TelefonodeContacto: "+getTelefonodecontacto(); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
     
     
 }

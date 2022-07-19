@@ -21,13 +21,13 @@ public class Persona {
     private String apellio2;
     private String telefono;
     private String correo;
-    private Date fechadenacimiento;
+    private int edad;
     
     public Persona(){
         
     }
 
-    public Persona(String Cedula, String nombre1, String nombre2, String apellido1, String apellio2, String telefono, String correo, Date fechadenacimiento) {
+    public Persona(String Cedula, String nombre1, String nombre2, String apellido1, String apellio2, String telefono, String correo, int edad) {
         this.Cedula = Cedula;
         this.nombre1 = nombre1;
         this.nombre2 = nombre2;
@@ -35,7 +35,7 @@ public class Persona {
         this.apellio2 = apellio2;
         this.telefono = telefono;
         this.correo = correo;
-        this.fechadenacimiento = fechadenacimiento;
+        this.edad = edad;
     }
 
     public void setApellido1(String apellido1) {
@@ -54,9 +54,11 @@ public class Persona {
         this.correo = correo;
     }
 
-    public void setFechadenacimiento(Date fechadenacimiento) {
-        this.fechadenacimiento = fechadenacimiento;
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
+
+   
 
     public void setNombre1(String nombre1) {
         this.nombre1 = nombre1;
@@ -98,22 +100,10 @@ public class Persona {
         return correo;
     }
 
-    public int calcularEdad(Date fecha) {
-    
-    Scanner teclado=new Scanner(System.in);
-int fecha_actual;
-int fecha_nacimiento;
-int edad;
-System.out.print("Digite la fecha altual:");
-fecha_actual=teclado.nextInt();
-
-System.out.println("Digite la fecha de nacimiento de la persona: ");
-fecha_nacimiento=teclado.nextInt();
-
-edad=fecha_actual-fecha_nacimiento;
-System.out.println("La edad de la persona es: " + edad);
+    public int getEdad() {
+        return edad;
     }
-
+    
     @Override
     public String toString() {
         return "los datos de la persona son:\n"
@@ -124,7 +114,7 @@ System.out.println("La edad de la persona es: " + edad);
                 +"Apellido2: "+getApellio2()+"\n"
                 +"Telefono: "+getTelefono()+"\n"
                 +"Correo: "+getCorreo()+"\n"
-                +"FechadeNacimiento: "+"\n";
+                +"Edad: "+getEdad()+"\n";
                 
                 }
   

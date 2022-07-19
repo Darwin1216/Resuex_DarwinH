@@ -5,50 +5,41 @@
  */
 package ec.edu.intsuperior.modelo;
 
-import java.util.Date;
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author Usuario
  */ 
 public class Empleado extends Persona{
-   String sueldobruto;
-   
-   HashSet<Directivo>directivo=new HashSet<Directivo>();
+   double sueldobruto;
 
     public Empleado() {
     }
 
-    public Empleado(String sueldobruto, String Cedula, String nombre1, String nombre2, String apellido1, String apellio2, String telefono, String correo, Date fechadenacimiento) {
-        super(Cedula, nombre1, nombre2, apellido1, apellio2, telefono, correo, fechadenacimiento);
+    public Empleado(double sueldobruto, String Cedula, String nombre1, String nombre2, String apellido1, String apellio2, String telefono, String correo, int edad) {
+        super(Cedula, nombre1, nombre2, apellido1, apellio2, telefono, correo, edad);
         this.sueldobruto = sueldobruto;
     }
 
-    public void setDirectivo(HashSet<Directivo> directivo) {
-        this.directivo = directivo;
-    }
-    
-
-    public void setSueldobruto(String sueldobruto) {
+    public void setSueldobruto(double sueldobruto) {
         this.sueldobruto = sueldobruto;
     }
 
-    public HashSet<Directivo> getDirectivo() {
-        return directivo;
-    }
-    
-
-    public String getSueldobruto() {
+    public double getSueldobruto() {
         return sueldobruto;
     }
+   
+   
 
     @Override
     public String toString() {
-        return super.toString()+"\n"
-                +"Directivo"+getDirectivo()+"\n"
-                +"SueldoBruto: "+getSueldobruto(); //To change body of generated methods, choose Tools | Templates.
+        return super.toString()+" \n"
+                +"SueldoBruto"+getSueldobruto(); //To change body of generated methods, choose Tools | Templates.
     }
+
+   
    
 
 }

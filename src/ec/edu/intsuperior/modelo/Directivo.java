@@ -5,7 +5,6 @@
  */
 package ec.edu.intsuperior.modelo;
 
-import java.util.HashSet;
 
 /**
  *
@@ -13,17 +12,12 @@ import java.util.HashSet;
  */
 public class Directivo {
     
-HashSet<Empleado>empleado=new HashSet<Empleado>();
+    private Empleado empleado;
 
-   
     public enum Categoria{CategoriaConserje, CategoriaMantenimiento, CategoriaDirectorEjecutivo, CategoriaDirectorComercial,CategoriaDirectordeOperciones,CategoriaDirectordeMarketing,CategoriaDirectordeRecursosHumanos}
     private Categoria categoria;
-    
-    public Directivo(){
-        
-    }
 
-    public void setEmpleado(HashSet<Empleado> empleado) {
+    public void setEmpleado(Empleado empleado) {
         this.empleado = empleado;
     }
 
@@ -31,11 +25,11 @@ HashSet<Empleado>empleado=new HashSet<Empleado>();
         this.categoria = categoria;
     }
 
-    public HashSet<Empleado> getEmpleado() {
+    public Empleado getEmpleado() {
         return empleado;
     }
     
-
+    
     public Categoria getCategoria() {
         return categoria;
     }
