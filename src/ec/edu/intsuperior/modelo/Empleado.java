@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author Usuario
+ * @author dh
  */ 
 public class Empleado extends Persona{
    double sueldobruto;

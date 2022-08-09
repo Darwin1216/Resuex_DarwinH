@@ -8,7 +8,7 @@ package ec.edu.intsuperior.modelo;
 
 /**
  *
- * @author Usuario
+ * @author dh
  */
 public class Directivo {
     

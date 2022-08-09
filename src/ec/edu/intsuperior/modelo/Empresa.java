@@ -9,7 +9,7 @@ import java.util.HashSet;
 
 /**
  *
- * @author Usuario
+ * @author dh
  */
 public class Empresa{
     private String nombre;

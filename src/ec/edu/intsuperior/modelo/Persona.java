@@ -6,12 +6,11 @@
 package ec.edu.intsuperior.modelo;
 
 import java.util.Date;
-import java.util.Scanner;
-import static javafx.scene.input.KeyCode.I;
+
 
 /**
  *
- * @author Usuario
+ * @author dh
  */
 public class Persona {
     private String Cedula;

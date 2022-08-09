@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author Usuario
+ * @author dh
  */
 public class Cliente extends Persona {
     String telefonodecontacto;
